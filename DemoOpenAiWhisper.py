@@ -1,4 +1,5 @@
 ## Pre-requisites for Whisper - pip install git+https://github.com/openai/whisper.git
+## Demo of Open AI whisper to transcribe the audio file into text
 import whisper
 
 # Load the Whisper model
