@@ -1,3 +1,4 @@
+# Example 1: Generating text based on a prompt
 from meta_llama import MetaLlama2
 
 # Initialize the model
