@@ -16,25 +16,25 @@ def validations(problems):
                 records = record.split('+')
                 #print(f'Length of record: {len(records[0].strip())}')
                 #print(f'Length of record: {len(records[1].strip())}')
-                print(f'record is {records[0]}')
-                print(f'record is {records[1]}')
+                #print(f'record is {records[0]}')
+                #print(f'record is {records[1]}')
                 if len(records[0].strip()) > 4 or len(records[1].strip()) > 4:
                     return "Error: Numbers cannot be more than four digits."
                 elif records[0].strip().isnumeric() == False or records[1].strip().isnumeric() == False:
-                    print(f'Number is: {records[0]}')
-                    print(f'Number is: {records[1]}')
+                    #print(f'Number is: {records[0]}')
+                    #print(f'Number is: {records[1]}')
                     return "Error: Numbers must only contain digits."
                 elif len(records) > 2:
                     return "Error: More than two operands are not allowed."
             elif record.find('-') > 0:
                 records = record.split('-')
-                print(f'Length of record: {len(records[0].strip())}')
-                print(f'Length of record: {len(records[1].strip())}')
+                #print(f'Length of record: {len(records[0].strip())}')
+                #print(f'Length of record: {len(records[1].strip())}')
                 if len(records[0].strip()) > 4 or len(records[1].strip()) > 4:
                     return "Error: Numbers cannot be more than four digits."
                 elif records[0].strip().isnumeric() == False or records[1].strip().isnumeric() == False:
-                    print(f'Number is: {records[0]}')
-                    print(f'Number is: {records[1]}')
+                    #print(f'Number is: {records[0]}')
+                    #print(f'Number is: {records[1]}')
                     return "Error: Numbers must only contain digits."
                     #print(f'record is {records[0]}')
                     #print(f'record is {records[1]}')
