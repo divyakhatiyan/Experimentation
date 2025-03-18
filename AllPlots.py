@@ -32,3 +32,14 @@ bins = [1, 2, 3, 5, 6, 7, 9, 10, 11, 13, 14, 15, 17, 18, 19, 21, 22, 23, 25, 26,
 plt.hist(x, bins, edgecolor = 'black')
 plt.show()
 
+# Bar Plot
+
+x = ['Dell', 'HP', 'Acer', 'Compaq']
+height = [70, 60, 30, 31]
+
+plt.bar(x, height)
+
+plt.show()
+
+
+
