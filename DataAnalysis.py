@@ -43,3 +43,7 @@ print(df.head(10))
 
 headers = ["age", "gender", "bmi", "no_of_children", "smoker", "region", "charges"]
 df.columns = headers
+
+# Now, replace the '?' entries with 'NaN' values.
+
+df.replace('?','NAN')
