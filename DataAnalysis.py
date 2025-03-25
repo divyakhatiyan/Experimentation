@@ -32,3 +32,6 @@ from sklearn.linear_model import LinearRegression, Ridge
 from sklearn.metrics import mean_squared_error, r2_score
 from sklearn.model_selection import cross_val_score, train_test_split
 
+file_name="insurance.csv"
+
+df = pd.read_csv(file_name)
