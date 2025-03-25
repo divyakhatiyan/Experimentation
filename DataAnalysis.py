@@ -38,3 +38,8 @@ df = pd.read_csv(file_name)
 
 ## Print top tem lines
 print(df.head(10))
+
+## Adding headers to the datframe
+
+headers = ["age", "gender", "bmi", "no_of_children", "smoker", "region", "charges"]
+df.columns = headers
