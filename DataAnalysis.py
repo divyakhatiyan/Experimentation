@@ -47,3 +47,7 @@ df.columns = headers
 # Now, replace the '?' entries with 'NaN' values.
 
 df.replace('?','NAN')
+
+# Use `dataframe.info()` to identify the columns that have some 'Null' (or NaN) information.
+
+print(df.info())
