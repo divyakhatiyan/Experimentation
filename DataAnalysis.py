@@ -35,3 +35,6 @@ from sklearn.model_selection import cross_val_score, train_test_split
 file_name="insurance.csv"
 
 df = pd.read_csv(file_name)
+
+## Print top tem lines
+print(df.head(10))
