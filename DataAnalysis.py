@@ -22,3 +22,13 @@ In this project, you will:
  - Develop single variable and multi variable Linear Regression models for predicting the `charges`
  - Use Ridge regression to refine the performance of Linear regression models.'''
 
+import pandas as pd
+import matplotlib.pyplot as plt
+import numpy as np
+import seaborn as sns
+from sklearn.pipeline import Pipeline
+from sklearn.preprocessing import StandardScaler, PolynomialFeatures
+from sklearn.linear_model import LinearRegression, Ridge
+from sklearn.metrics import mean_squared_error, r2_score
+from sklearn.model_selection import cross_val_score, train_test_split
+
