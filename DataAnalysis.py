@@ -51,3 +51,5 @@ df.replace('?','NAN')
 # Use `dataframe.info()` to identify the columns that have some 'Null' (or NaN) information.
 
 print(df.info())
+
+df["age"].replace(NULL,'NAN')
