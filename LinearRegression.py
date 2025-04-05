@@ -73,3 +73,8 @@ plt.scatter(cdf.CYLINDERS, cdf.CO2EMISSIONS, color='blue')
 plt.xlabel("Engine Cylinders")
 plt.ylabel("Emissions")
 plt.show()
+"Extract the input feature and labels from the dataset"
+X=cdf.ENGINESIZE.to_numpy()
+y=cdf.CO2EMISSIONS.to_numpy()
+
+"Create train and test datasets"
