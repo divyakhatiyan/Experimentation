@@ -98,3 +98,11 @@ regressor.fit(X_train.reshape(-1, 1), y_train)
 # Print the coefficients
 print ('Coefficients: ', regressor.coef_[0]) # with simple linear regression there is only one coefficient, here we extract it from the 1 by 1 array.
 print ('Intercept: ',regressor.intercept_)
+
+'''Here, Coefficient and Intercept are the regression parameters determined by the model.
+They define the slope and intercept of the 'best-fit' line to the training data. '''
+"Visualize model outputs"
+plt.scatter(X_train, y_train,  color='blue')
+plt.plot(X_train, regressor.coef_ * X_train + regressor.intercept_, '-r')
+plt.xlabel("Engine size")
+plt.ylabel("Emission")
