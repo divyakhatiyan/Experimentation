@@ -78,3 +78,23 @@ X=cdf.ENGINESIZE.to_numpy()
 y=cdf.CO2EMISSIONS.to_numpy()
 
 "Create train and test datasets"
+
+from sklearn.model_selection import train_test_split
+
+X_train, X_test, y_train, y_test = train_test_split(X,y,test_size=0.2,random_state=42)
+type(X_train), np.shape(X_train), np.shape(X_train)
+
+"Build a simple linear regression model"
+from sklearn import linear_model
+
+# create a model object
+regressor = linear_model.LinearRegression()
+
+# train the model on the training data
+# X_train is a 1-D array but sklearn models expect a 2D array as input for the training data, with shape (n_observations, n_features).
+# So we need to reshape it. We can let it infer the number of observations using '-1'.
+regressor.fit(X_train.reshape(-1, 1), y_train)
+
+# Print the coefficients
+print ('Coefficients: ', regressor.coef_[0]) # with simple linear regression there is only one coefficient, here we extract it from the 1 by 1 array.
+print ('Intercept: ',regressor.intercept_)
