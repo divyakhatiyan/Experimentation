@@ -59,3 +59,14 @@ Notice that FUELCONSUMPTION_COMB and FUELCONSUMPTION_COMB_MPG are not perfectly 
 df = df.drop(['CYLINDERS', 'FUELCONSUMPTION_CITY', 'FUELCONSUMPTION_HWY','FUELCONSUMPTION_COMB',],axis=1)
 
 print(df.head(9))
+
+axes = pd.plotting.scatter_matrix(df, alpha=0.2)
+# need to rotate axis labels so we can read them
+for ax in axes.flatten():
+    ax.xaxis.label.set_rotation(90)
+    ax.yaxis.label.set_rotation(0)
+    ax.yaxis.label.set_ha('right')
+
+plt.tight_layout()
+plt.gcf().subplots_adjust(wspace=0, hspace=0)
+plt.show()
