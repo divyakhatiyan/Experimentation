@@ -37,4 +37,10 @@ Load the data
 df = pd.read_csv(url)
 
 # verify successful load with some randomly selected records
-df.sample(5)
+print(df.sample(5))
+"Explore and select features"
+print(df.describe())
+
+# Drop categoricals and any unseless columns
+df = df.drop(['MODELYEAR', 'MAKE', 'MODEL', 'VEHICLECLASS', 'TRANSMISSION', 'FUELTYPE',],axis=1)
+
