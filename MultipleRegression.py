@@ -70,3 +70,12 @@ for ax in axes.flatten():
 plt.tight_layout()
 plt.gcf().subplots_adjust(wspace=0, hspace=0)
 plt.show()
+
+
+"Extract the input features and labels from the data set"
+"Extract the required columns and convert the resulting dataframes to NumPy arrays."
+
+X = df.iloc[:,[0,1]].to_numpy()
+y = df.iloc[:,[2]].to_numpy()
+
+"Preprocess selected features"
