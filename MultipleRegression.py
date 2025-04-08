@@ -94,3 +94,24 @@ from sklearn.model_selection import train_test_split
 
 X_train, X_test, y_train, y_test = train_test_split(X_std,y,test_size=0.2,random_state=42)
 
+"Create train and test datasets"
+from sklearn.model_selection import train_test_split
+
+X_train, X_test, y_train, y_test = train_test_split(X_std,y,test_size=0.2,random_state=42)
+
+"Build a multiple linear regression model"
+
+from sklearn import linear_model
+
+# create a model object
+regressor = linear_model.LinearRegression()
+
+# train the model in the training data
+regressor.fit(X_train, y_train)
+
+# Print the coefficients
+coef_ =  regressor.coef_
+intercept_ = regressor.intercept_
+
+print ('Coefficients: ',coef_)
+print ('Intercept: ',intercept_)
