@@ -79,3 +79,18 @@ X = df.iloc[:,[0,1]].to_numpy()
 y = df.iloc[:,[2]].to_numpy()
 
 "Preprocess selected features"
+from sklearn import preprocessing
+
+std_scaler = preprocessing.StandardScaler()
+X_std = std_scaler.fit_transform(X)
+
+pd.DataFrame(X_std).describe().round(2)
+
+"Create train and test datasets"
+
+"Randomly split your data into train and test sets, using 80% of the dataset for training and reserving the remaining 20% for testing."
+
+from sklearn.model_selection import train_test_split
+
+X_train, X_test, y_train, y_test = train_test_split(X_std,y,test_size=0.2,random_state=42)
+
